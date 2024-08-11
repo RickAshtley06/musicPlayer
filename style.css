@@ -1,0 +1,56 @@
+  /* Selecting all the HTML elements with song as class and adding style to them */
+    .song { 
+        height: 100px;
+        width: 200px;
+        background-color: aqua;
+        padding: 6px;
+        text-align: center;
+        flex: 1; /* Make songs flexible */
+        min-width: 150px; /* Ensure minimum width */
+    }
+
+    .container {
+        background-image: url("./images/background.png");
+        background-size: cover; /* Changed to cover for better background display */
+        background-repeat: no-repeat;
+        min-height: 100vh; /* Ensures the container takes full viewport height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px; /* Add padding to container */
+    }
+
+    .songContainer {
+        display: flex; 
+        gap: 10px; /* Reduced gap between songs */
+        justify-content: center;
+        flex-wrap: wrap; /* Allow wrapping of items */
+        margin-bottom: 10px; /* Reduced space between songs and controller */
+    }
+
+    .controller {
+        text-align: center;
+        padding: 20px; /* Adjusted padding for the controller */
+        width: 100%; /* Ensure it takes full width */
+        max-width: 600px; /* Limit the maximum width */
+    }
+
+    audio {
+        width: 100%; /* Make audio element responsive */
+    }
+
+    /* Responsive styling */
+    @media (max-width: 600px) {
+        .song {
+            width: 100%; /* Make songs full width on small screens */
+        }
+
+        .songContainer {
+            gap: 5px; /* Further reduce gap on small screens */
+        }
+
+        .controller {
+            padding: 16px; /* Reduce padding on small screens */
+        }
+    }

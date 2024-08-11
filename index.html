@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="heading">No music is selected yet</div>
+    
+    <div class="container"><!--We use classes to identify html tags(just like human names)  -->
+        <div class="songContainer">
+
+            <div id="1" class="songCard song " >
+                <p class="key">1</p>
+                <p class="detail">Official</p>
+            </div>
+
+            <div id="2" class="songCard song">
+                <p class="key">2</p>
+                <p class="detail">A Cappella Cover</p>
+            </div>
+
+            <div id="3" class="songCard song">
+                <p class="key">3</p>
+                <p class="detail">Female Version Cover</p>
+            </div>
+            
+        </div>
+
+        <!-- create a new div for containing AUDIO controls -->
+         <div class="controller">
+            
+            <audio controls autoplay  id="player"> <!-- inbult support for playing audio in html -->
+                <source src="https://commondatastorage.googleapis.com/codeskulptor-assets/Evillaugh.ogg" type="audio/ogg">
+                Your browser does not support the audio element.<!-- this gets printed only if the above audio could not be played -->
+            </audio>
+         </div>
+
+
+        <script src="./main.js"></script>
+</body>
+</html>
